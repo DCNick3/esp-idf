@@ -270,6 +270,7 @@ function(__kconfig_generate_config sdkconfig sdkconfig_defaults)
         --output config ${sdkconfig}
         COMMAND ${TERM_CHECK_CMD}
         COMMAND ${CMAKE_COMMAND} -E env
+        "IDF_PATH=$ENV{IDF_PATH}"
         "COMPONENT_KCONFIGS_SOURCE_FILE=${kconfigs_path}"
         "COMPONENT_KCONFIGS_PROJBUILD_SOURCE_FILE=${kconfigs_projbuild_path}"
         "IDF_CMAKE=y"
